@@ -163,14 +163,14 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-        <Slide id="Team" align="flex-start center" transition={["fade", "fade"]} bgImage={images.backgroundPic50.replace("/", "")}>
-          <Heading size={1} fit textColor="secondary">
-          <Image src={images.dpl.replace("/", "")} margin="0px 20px 0px" height="30px"/>
+        <Slide id="Team" transition={["fade", "fade"]} bgImage={images.backgroundPic50.replace("/", "")}>
+          <Heading margin="0px -50px" size={1} fit textColor="secondary">
+          <Image src={images.dpl.replace("/", "")} height="30px" margin="0px 10px 0px 0px" />
           Our Team
           </Heading>
-          <Layout>
+          <Layout align="flex-start center">
             <Fill>
-              <Table>
+              <Table margin="0px -100px">
                 <TableRow>
                   <TableItem>
                     <Image src={images.taylor.replace("/", "")} margin="80px 20px 0px 0px" height="200px"/>
@@ -195,11 +195,11 @@ export default class Presentation extends React.Component {
                   <TableItem>Michael</TableItem>
                   <TableItem>Cathy</TableItem>
                 </TableRow>
-                <TableRow size={3}>
+                <TableRow>
                   <TableItem><Text textSize="0.5em">Idea & Friends</Text></TableItem>
-                  <TableItem><Text textSize="0.5em">Bio & Photos</Text></TableItem>
-                  <TableItem><Text textSize="0.5em">Posts to Sport</Text></TableItem>
-                  <TableItem><Text textSize="0.5em">Chat for Post</Text></TableItem>
+                  <TableItem><Text textSize="0.5em">Bios & Photos</Text></TableItem>
+                  <TableItem><Text textSize="0.5em">Posts to Sports</Text></TableItem>
+                  <TableItem><Text textSize="0.5em">Chat for Posts</Text></TableItem>
                   <TableItem><Text textSize="0.5em">Sports & Spectacle</Text></TableItem>
                 </TableRow>
               </Table>
