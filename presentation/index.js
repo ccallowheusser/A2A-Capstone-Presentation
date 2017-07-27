@@ -36,15 +36,8 @@ require("spectacle/lib/themes/default/index.css");
 
 
 const images = {
-  backgroundPic: require("../assets/backgroundPic.png"),
-  backgroundPic50: require("../assets/backgroundPic50.png"),
-  basketball1: require("../assets/Basketball1.png"),
-  basketball2: require("../assets/Basketball2.png"),
-  basketball3: require("../assets/Basketball3.png"),
-  basketball4: require("../assets/Basketball4.png"),
-  basketball5: require("../assets/Basketball5.png"),
-  basketball6: require("../assets/Basketball6.png"),
-  basketball7: require("../assets/Basketball7.png"),
+  backgroundPic: require("../assets/backgroundPic-A2A-TL.png"),
+  backgroundPic50: require("../assets/backgroundPic-A2A-TL50.png"),
   brach: require("../assets/Brach.gif"),
   taylor: require("../assets/Taylor.gif"),
   michael: require("../assets/Michael.gif"),
@@ -53,8 +46,6 @@ const images = {
   dpl: require("../assets/DPL.png"),
   model: require("../assets/Model.png"),
   A2AlogoWh: require("../assets/A2A-white.png"),
-  A2AlogoBl: require("../assets/A2A-black.png"),
-  soccerballFire: require("../assets/soccerballFire.jpg"),
   sports: require("../assets/sports.png")
 };
 
@@ -73,8 +64,8 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["fade", "fade"]} transitionDuration={500} theme={theme}>
-        <Slide id="Title" transition={["fade", "fade"]} bgImage={images.backgroundPic.replace("/", "")}>
+      <Deck theme={theme}>
+        <Slide id="Title" transition={["fade", "fade"]} transitionDuration={500} bgImage={images.backgroundPic.replace("/", "")} >
           <Heading size={1} fit caps lineHeight={1} textColor="primary">
             Athlete to Athlete
           </Heading>
@@ -90,19 +81,19 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
             <Appear>
-            <ListItem textColor="primary">"I want to play ball now!"</ListItem>
+              <ListItem textColor="primary">"I want to play ball now!"</ListItem>
             </Appear>
             <Appear>
-            <ListItem textColor="primary">"I've made 10 calls ..."</ListItem>
+              <ListItem textColor="primary">"I've made 10 calls ..."</ListItem>
             </Appear>
             <Appear>
-            <ListItem textColor="primary">"... can't find anyone to play."</ListItem>
+              <ListItem textColor="primary">"... can't find anyone to play."</ListItem>
             </Appear>
             <Appear>
-            <ListItem textColor="primary">"Social media for sports?"</ListItem>
+              <ListItem textColor="primary">"Social media for sports?"</ListItem>
             </Appear>
             <Appear>
-            <ListItem textColor="primary">"Let's build one!"</ListItem>
+              <ListItem textColor="primary">"Let's build one!"</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -113,13 +104,16 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
             <Appear>
-            <ListItem textColor="primary">List 1</ListItem>
+              <ListItem textColor="primary">Message-bus group chat</ListItem>
             </Appear>
             <Appear>
-            <ListItem textColor="primary">List 2</ListItem>
+              <ListItem textColor="primary">Global post messages</ListItem>
             </Appear>
             <Appear>
-            <ListItem textColor="primary">List 3</ListItem>
+              <ListItem textColor="primary">Drag and drop photos</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary">Many-through models</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -130,13 +124,19 @@ export default class Presentation extends React.Component {
           </Heading>
           <List>
             <Appear>
-            <ListItem textColor="primary">List 1</ListItem>
+              <ListItem textColor="primary" nowrap>Building confident expertise</ListItem>
             </Appear>
             <Appear>
-            <ListItem textColor="primary">List 2</ListItem>
+              <ListItem textColor="primary" nowrap>Login bug --> Lost time</ListItem>
             </Appear>
             <Appear>
-            <ListItem textColor="primary">List 3</ListItem>
+              <ListItem textColor="primary" nowrap>Agreeing on "The Dream" vs. MVP</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary" nowrap>What? Only four weeks?</ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textColor="primary" nowrap>Thank God! Only four weeks!</ListItem>
             </Appear>
           </List>
         </Slide>
@@ -146,9 +146,9 @@ export default class Presentation extends React.Component {
             Athlete to Athlete Model
           </Heading>
           <Layout>
-          <Fill>
-          <Image src={images.model.replace("/", "")} margin="50px 0px" height="600px"/>
-          </Fill>
+            <Fill>
+              <Image src={images.model.replace("/", "")} center margin="50px 0px" height="600px"/>
+            </Fill>
           </Layout>
         </Slide>
 
@@ -157,9 +157,9 @@ export default class Presentation extends React.Component {
             Athlete to Athlete Home
           </Heading>
           <Layout>
-          <Fill>
-          <Image src={images.sports.replace("/", "")} center margin="50px 0px" height="600px"/>
-          </Fill>
+            <Fill>
+              <Image src={images.sports.replace("/", "")} margin="50px 0px" height="600px"/>
+            </Fill>
           </Layout>
         </Slide>
 
