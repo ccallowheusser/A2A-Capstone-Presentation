@@ -38,6 +38,7 @@ require("spectacle/lib/themes/default/index.css");
 const images = {
   backgroundPic: require("../assets/backgroundPic-A2A-TL.png"),
   backgroundPic50: require("../assets/backgroundPic-A2A-TL50.png"),
+  backgroundPicA2A: require("../assets/backgroundPicA2A.png"),
   brach: require("../assets/Brach.gif"),
   taylor: require("../assets/Taylor.gif"),
   michael: require("../assets/Michael.gif"),
@@ -46,7 +47,25 @@ const images = {
   dpl: require("../assets/DPL.png"),
   model: require("../assets/Model.png"),
   A2AlogoWh: require("../assets/A2A-white.png"),
-  sports: require("../assets/sports.png")
+  sports: require("../assets/sports.png"),
+  ruby: require("../assets/1-ruby-on-rails.png"),
+  rubygems: require("../assets/1-rubygems.png"),
+  htmlcss: require("../assets/1-html5css3.png"),
+  javascript: require("../assets/1-javascript.png"),
+  redux: require("../assets/1-redux.png"),
+  react: require("../assets/1-react.png"),
+  A2Afirst: require("../assets/1A2A.png"),
+  Login: require("../assets/2Login.gif"),
+  Bio: require("../assets/3Taylor.png"),
+  SportsPage: require("../assets/4Sports.png"),
+  Favs: require("../assets/5Favs.png"),
+  FavsX2: require("../assets/6FavsX2.png"),
+  FavsX1: require("../assets/7FavsX1.png"),
+  Friends: require("../assets/8Friends.png"),
+  Post: require("../assets/9Post.png"),
+  Posts: require("../assets/10Posts.png"),
+  MapCloseup: require("../assets/11MapCloseup.png"),
+  Chat: require("../assets/12Chat.png"),
 };
 
 preloader(images);
@@ -75,52 +94,56 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
 
-        <Slide id="Problem" transition={["fade", "fade"]} bgImage={images.backgroundPic.replace("/", "")}>
+        <Slide id="Problem" transition={["fade", "fade"]} bgColor="black" bgImage={images.backgroundPicA2A.replace("/", "")}>
           <Heading size={1} fit caps lineHeight={1} textColor="primary">
             The Problem
           </Heading>
           <List>
-            <Appear>
-              <ListItem textColor="primary">"I want to play ball now!"</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">"I've made 10 calls ..."</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">"... can't find anyone to play."</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">"Social media for sports?"</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">"Let's build one!"</ListItem>
-            </Appear>
+            <ListItem textColor="primary">"I want to play ball now!"</ListItem>
+            <ListItem textColor="primary">"I've made 10 calls ..."</ListItem>
+            <ListItem textColor="primary">"... can't find anyone to play."</ListItem>
+            <ListItem textColor="primary">"Social media for sports?"</ListItem>
+            <ListItem textColor="primary">"Let's build one!"</ListItem>
           </List>
         </Slide>
 
-        <Slide id="Technologies" transition={["fade", "fade"]} bgImage={images.backgroundPic.replace("/", "")}>
+        <Slide id="Technologies" transition={["fade", "fade"]} bgColor="black" bgImage={images.backgroundPicA2A.replace("/", "")}>
           <Heading size={1} fit caps lineHeight={1} textColor="primary">
             Technologies
           </Heading>
-          <List>
-            <Appear>
-              <ListItem textColor="primary">Message-bus group chat</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">Global post messages</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">Drag and drop photos</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary">Many-through models</ListItem>
-            </Appear>
-          </List>
+          <Layout align="flex-start center">
+            <Fill>
+              <Table margin="0px 0px">
+                <TableRow>
+                  <TableItem>
+                    <Image src={images.ruby.replace("/", "")} margin="80px 20px 0px 20px" height="250px"/>
+                  </TableItem>
+                  <TableItem>
+                    <Image src={images.rubygems.replace("/", "")} margin="80px 20px 0px 20px" height="250px"/>
+                  </TableItem>
+                  <TableItem>
+                    <Image src={images.htmlcss.replace("/", "")} margin="80px 20px 0px 20px" height="250px"/>
+                  </TableItem>
+                </TableRow>
+                <TableRow>
+                  <TableItem>
+                    <Image src={images.react.replace("/", "")} margin="20px 20px 0px 20px" height="250px"/>
+                  </TableItem>
+                  <TableItem>
+                    <Image src={images.javascript.replace("/", "")} margin="20px 20px 0px 0px" height="250px"/>
+                  </TableItem>
+                  <TableItem>
+                    <Image src={images.redux.replace("/", "")} margin="20px 20px 0px 0px" height="250px"/>
+                  </TableItem>
+                </TableRow>
+              </Table>
+            </Fill>
+          </Layout>
         </Slide>
 
-        <Slide id="Roadblocks" transition={["fade", "fade"]} bgImage={images.backgroundPic.replace("/", "")}>
+        <Slide id="Challenges" transition={["fade", "fade"]} bgColor="black" bgImage={images.backgroundPicA2A.replace("/", "")}>
           <Heading size={1} fit caps lineHeight={1} textColor="primary">
-            Roadblocks
+            Challenges
           </Heading>
           <List>
             <Appear>
@@ -130,7 +153,7 @@ export default class Presentation extends React.Component {
               <ListItem textColor="primary" nowrap>Login bug --> Lost time</ListItem>
             </Appear>
             <Appear>
-              <ListItem textColor="primary" nowrap>Agreeing on "The Dream" vs. MVP</ListItem>
+              <ListItem textColor="primary" nowrap>Agreein on "The Dream" vs. MVP</ListItem>
             </Appear>
             <Appear>
               <ListItem textColor="primary" nowrap>What? Only four weeks?</ListItem>
@@ -152,15 +175,40 @@ export default class Presentation extends React.Component {
           </Layout>
         </Slide>
 
-        <Slide align="flex-start center" id="Sports" transition={["fade", "fade"]} bgColor="black">
-          <Heading size={1} fit caps lineHeight={1} textColor="primary">
-            Athlete to Athlete Home
-          </Heading>
-          <Layout>
-            <Fill>
-              <Image src={images.sports.replace("/", "")} margin="50px 0px" height="600px"/>
-            </Fill>
-          </Layout>
+        <Slide id="A2A" transition={["fade", "fade"]} bgColor="black" bgImage={images.A2Afirst.replace("/", "")}>
+        </Slide>
+
+        <Slide id="Login" transition={["fade", "fade"]} bgColor="black" bgImage={images.Login.replace("/", "")}>
+        </Slide>
+
+        <Slide id="Bio" transition={["fade", "fade"]} bgColor="black" bgImage={images.Bio.replace("/", "")}>
+        </Slide>
+
+        <Slide id="Sports" transition={["fade", "fade"]} bgColor="black" bgImage={images.SportsPage.replace("/", "")}>
+        </Slide>
+
+        <Slide id="Favs" transition={["fade", "fade"]} bgColor="black" bgImage={images.Favs.replace("/", "")}>
+        </Slide>
+
+        <Slide id="FavsX2" transition={["fade", "fade"]} bgColor="black" bgImage={images.FavsX2.replace("/", "")}>
+        </Slide>
+
+        <Slide id="FavsX1" transition={["fade", "fade"]} bgColor="black" bgImage={images.FavsX1.replace("/", "")}>
+        </Slide>
+
+        <Slide id="Post" transition={["fade", "fade"]} bgColor="black" bgImage={images.Post.replace("/", "")}>
+        </Slide>
+
+        <Slide id="Posts" transition={["fade", "fade"]} bgColor="black" bgImage={images.Posts.replace("/", "")}>
+        </Slide>
+
+        <Slide id="Map" transition={["fade", "fade"]} bgColor="black" bgImage={images.MapCloseup.replace("/", "")}>
+        </Slide>
+
+        <Slide id="Chat" transition={["fade", "fade"]} bgColor="black" bgImage={images.Chat.replace("/", "")}>
+        </Slide>
+
+        <Slide id="Friends" transition={["fade", "fade"]} bgColor="black" bgImage={images.Friends.replace("/", "")}>
         </Slide>
 
         <Slide id="Team" transition={["fade", "fade"]} bgImage={images.backgroundPic50.replace("/", "")}>
