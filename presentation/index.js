@@ -146,21 +146,17 @@ export default class Presentation extends React.Component {
             Challenges
           </Heading>
           <List>
-            <Appear>
+
               <ListItem textColor="primary" nowrap>Building confident expertise</ListItem>
-            </Appear>
-            <Appear>
+
               <ListItem textColor="primary" nowrap>Login bug --> Lost time</ListItem>
-            </Appear>
-            <Appear>
-              <ListItem textColor="primary" nowrap>Agreein on "The Dream" vs. MVP</ListItem>
-            </Appear>
-            <Appear>
+
+              <ListItem textColor="primary" nowrap>Agreeing on "The Dream" vs. MVP</ListItem>
+
               <ListItem textColor="primary" nowrap>What? Only four weeks?</ListItem>
-            </Appear>
-            <Appear>
+
               <ListItem textColor="primary" nowrap>Thank God! Only four weeks!</ListItem>
-            </Appear>
+
           </List>
         </Slide>
 
@@ -212,9 +208,10 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide id="Team" transition={["fade", "fade"]} bgImage={images.backgroundPic50.replace("/", "")}>
-          <Heading margin="0px -50px" size={1} fit textColor="secondary">
-          <Image src={images.dpl.replace("/", "")} height="30px" margin="0px 10px 0px 0px" />
+          <Heading fit margin="0px 0px" size={1} textColor="secondary">
+          <Image src={images.dpl.replace("/", "")} height="20px" margin="0px 5px 0px 0px" />
           Our Team
+          <Image src={images.dpl.replace("/", "")} height="20px" margin="0px 0px 0px 5px" />
           </Heading>
           <Layout align="flex-start center">
             <Fill>
@@ -244,11 +241,11 @@ export default class Presentation extends React.Component {
                   <TableItem>Cathy</TableItem>
                 </TableRow>
                 <TableRow>
-                  <TableItem><Text textSize="0.5em">Idea & Friends</Text></TableItem>
-                  <TableItem><Text textSize="0.5em">Bios & Photos</Text></TableItem>
-                  <TableItem><Text textSize="0.5em">Posts to Sports</Text></TableItem>
-                  <TableItem><Text textSize="0.5em">Chat for Posts</Text></TableItem>
-                  <TableItem><Text textSize="0.5em">Sports & Spectacle</Text></TableItem>
+                <TableItem><Text textSize="0.5em">App Idea & Friends</Text></TableItem>
+                <TableItem><Text textSize="0.5em">Bios, Photos & Maps</Text></TableItem>
+                <TableItem><Text textSize="0.5em">Posts to Sports & Maps</Text></TableItem>
+                <TableItem><Text textSize="0.5em">Chat MSGs & NavBar</Text></TableItem>
+                <TableItem><Text textSize="0.5em">Sports, Favs & Spectacle</Text></TableItem>
                 </TableRow>
               </Table>
             </Fill>
