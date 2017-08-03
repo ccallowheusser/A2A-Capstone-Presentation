@@ -160,17 +160,6 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide align="flex-start center" id="Model" transition={["fade", "fade"]} bgColor="black">
-          <Heading size={1} fit caps lineHeight={1} textColor="primary">
-            Athlete to Athlete Model
-          </Heading>
-          <Layout>
-            <Fill>
-              <Image src={images.model.replace("/", "")} center margin="50px 0px" height="600px"/>
-            </Fill>
-          </Layout>
-        </Slide>
-
         <Slide id="A2A" transition={["fade", "fade"]} bgColor="black" bgImage={images.A2Afirst.replace("/", "")}>
         </Slide>
 
@@ -195,10 +184,13 @@ export default class Presentation extends React.Component {
         <Slide id="Post" transition={["fade", "fade"]} bgColor="black" bgImage={images.Post.replace("/", "")}>
         </Slide>
 
-        <Slide id="Posts" transition={["fade", "fade"]} bgColor="black" bgImage={images.Posts.replace("/", "")}>
+        <Slide id="Posts1" transition={["fade", "fade"]} bgColor="black" bgImage={images.Posts.replace("/", "")}>
         </Slide>
 
         <Slide id="Map" transition={["fade", "fade"]} bgColor="black" bgImage={images.MapCloseup.replace("/", "")}>
+        </Slide>
+
+        <Slide id="Posts2" transition={["fade", "fade"]} bgColor="black" bgImage={images.Posts.replace("/", "")}>
         </Slide>
 
         <Slide id="Chat" transition={["fade", "fade"]} bgColor="black" bgImage={images.Chat.replace("/", "")}>
